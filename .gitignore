@@ -1,0 +1,9 @@
+#Git Ignore Settings 
+
+#Eclipse pieces
+.project
+.settings/
+
+#Non-required Force.com Items
+salesforce.schema
+src/package.xml

@@ -1,0 +1,26 @@
+Apex Koans - Readme
+===================
+
+§0. Introduction
+----------------
+
+The Apex language is the basis language for object-orientated development on the Salesforce Force.com platform. It is rapidly growing in popularity and has is attracting a high number of users and business drawn to its very rapid development model.
+
+I was recently running a training and induction course for a series of new graduates my employer had brought on and was extolling the virtues of the koan systems out there for languages such as Ruby, .Net and Java, all of which I have used and thought were very instructive. The group asked if such a set existed for Apex and Force.com and I realised there was nothing for them to use. This set of classes is the basic building foundation for this. 
+
+The target audience is administrators or developers new to the platform who wish to learn the fundamentals of Apex. The classes should be dropped into a Salesforce developer org and then worked on a class at a time. I have yet to decide upon a specific order, but may attempt to formalise one in the future.
+
+§1. Installation
+----------------
+
+Simply push the classes up to a Salesforce developer org (get one from developer.force.com) and then choose a class and run the tests in it. I would recommend using Eclipse to work with the system as it provides the best experience (personally). The koans are written as a set of tests to fail, you need to fix them and in doing so learn about working with certain objects and structures on the platform.
+
+§2. Future Plans
+----------------
+
+At the moment the initial aim is just to have the system cover the general basic OOP elements of Apex. Lists, Sets, Maps, Object types, etc. The grand plan idea would be able to have a test system setup to allow SOQL, SOSL, Dynamics Apex, Batch Apex etc. all included but baby steps.
+
+§3. Contributing
+----------------
+
+I would welcome all input and help. Drop me a message and/or a pull request and hopefully we can grow this system :-)
