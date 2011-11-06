@@ -13,14 +13,26 @@ The target audience is administrators or developers new to the platform who wish
 §1. Installation
 ----------------
 
-Simply push the classes up to a Salesforce developer org (get one from developer.force.com) and then choose a class and run the tests in it. I would recommend using Eclipse to work with the system as it provides the best experience (personally). The koans are written as a set of tests to fail, you need to fix them and in doing so learn about working with certain objects and structures on the platform.
+Simply push the classes up to a Salesforce developer org (get one from developer.force.com) and then choose a class and run the tests in it. I would recommend using Eclipse to work with the system as it provides the best experience (personally). The koans are written as a set of tests to fail, you need to fix them and in doing so learn about working with certain objects and structures on the platform. Through experimentation I have discovered that if you open the class in Eclipse and run its tests from there then you get the methods run in order, if you run them through the browser this is not necessarily so. Note that this may be me getting coincidental running orders, maybe someone could clarify from Salesforce?
 
-§2. Future Plans
+§2. Contents/Material Covered
+-----------------------------
+
+(available)
+Lists
+Sets
+(planned)
+Maps
+Logic
+Enums
+Primitives
+
+§3. Future Plans
 ----------------
 
-At the moment the initial aim is just to have the system cover the general basic OOP elements of Apex. Lists, Sets, Maps, Object types, etc. The grand plan idea would be able to have a test system setup to allow SOQL, SOSL, Dynamics Apex, Batch Apex etc. all included but baby steps.
+After the items above are covered I would be interested in any feedback provided in order to see what people would like for the rest of the koans. I am wary of just repeating the Ruby/Java/.Net koans in apex as the Force.com platform, apex and cloud computing are very different from other programming paradigms and I feel we could add greater value by exploring some of those different avenue.
 
-§3. Contributing
+§4. Contributing
 ----------------
 
 I would welcome all input and help. Drop me a message and/or a pull request and hopefully we can grow this system :-)
