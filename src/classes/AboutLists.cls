@@ -1,11 +1,12 @@
 /*
 // This koan will focus on Lists and the methods provided to a List object.
 */
+
 @isTest
 private class AboutLists {
 
 	static Integer toBeReplaced = 100;
-	static String toBeReplacedStr = 'test';
+	static String toBeReplacedStr = 'What string goes here?';
 
 	//Empty lists and their lack of contents
     static testMethod void ListKoan1() 
@@ -37,10 +38,10 @@ private class AboutLists {
     	strings.add('Some value');
     	
     	//What do we expect below
-    	System.assertEquals(strings[0],'What string goes here?', 'You have not been enlightened by List Koan 3 in About Lists');
+    	System.assertEquals(strings[0],toBeReplacedStr, 'You have not been enlightened by List Koan 3 in About Lists');
     	
     	//We can use array notation or get methods on the list object
-    	System.assertEquals(strings.get(0), 'What string goes here?', 'You have not been enlightened by List Koan 3 in About Lists');
+    	System.assertEquals(strings.get(0), toBeReplacedStr, 'You have not been enlightened by List Koan 3 in About Lists');
     }
     
     //We can also define lists more dynamically
