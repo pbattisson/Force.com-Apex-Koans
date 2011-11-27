@@ -78,4 +78,78 @@ private class AboutMaps
 		System.assertEquals(testKeys.contains(234), false, 'You have yet to be enlightened by Koan 5 (III) in About Maps');
 		System.assertEquals(testKeys.contains(153), false, 'You have yet to be enlightened by Koan 5 (IV) in About Maps');
 	}
+	
+	//We have seen how to get all of the keys in the map into a set, we can also get all of the values in a list
+	static testMethod void MapKoan6()
+	{
+		//Create a map containing some data
+		Map<Integer, String> testMap = new Map<Integer, String>();
+		testMap.put(123, 'Our first value');
+		testMap.put(234, 'Our second value');
+		testMap.put(345, 'Our third value');
+		
+		//We can retrieve a list of all the values in the map
+		List<String> testValues = testMap.values();
+		
+		//We can now do some assertions on that list and manipualte using what we learnt in about lists
+		System.assertEquals(testValues.size(), toBeReplaced, 'You have yet to be enlightened by Koan 6 (I) in About Maps');
+		System.assertEquals(testValues.get(0), toBeReplacedStr, 'You have yet to be enlightened by Koan 6 (II) in About Maps');
+		System.assertEquals(testValues.get(1), toBeReplacedStr, 'You have yet to be enlightened by Koan 6 (III) in About Maps');
+		System.assertEquals(testValues.get(2), toBeReplacedStr, 'You have yet to be enlightened by Koan 6 (IV) in About Maps');
+	}
+	
+	//Let us now look at some of the behaviour of the putAll method
+	static testMethod void MapKoan7()
+	{
+		//Let us a create 2 maps, one which is empty and one which contains some data
+		Map<Integer, String> testMap1 = new Map<Integer, String>();
+		Map<Integer, String> testMap2 = new Map<Integer, String>();
+		testMap2.put(123, 'Our first value');
+		testMap2.put(234, 'Our second value');
+		testMap2.put(345, 'Our third value');
+		
+		//So we can check now that the sizes of the maps are what we expect
+		System.assertEquals(testMap1.size(), toBeReplaced, 'You have yet to be enlightened by Koan 7 (I) in About Maps');
+		System.assertEquals(testMap2.size(), toBeReplaced, 'You have yet to be enlightened by Koan 7 (II) in About Maps');
+		
+		//We can use the putAll method to place all the contents of one map into another
+		testMap1.putAll(testMap2);
+		
+		//What do we expect the sizes to be now?
+		System.assertEquals(testMap1.size(), toBeReplaced, 'You have yet to be enlightened by Koan 7 (III) in About Maps');
+		System.assertEquals(testMap2.size(), toBeReplaced, 'You have yet to be enlightened by Koan 7 (IV) in About Maps');
+	}
+	
+	//The putAll method has some interesting behaviour with maps though
+	static testMethod void MapKoan8()
+	{
+		//Create 2 maps like below
+		Map<String, String> testMap1 = new Map<String, String>();
+		testMap1.put('Name', 'Joe Bloggs');
+		testMap1.put('Age', '25');
+		testMap1.put('Email', 'jbloggs@bloggsy.com');
+		testMap1.put('City', 'London');
+		
+		Map<String, String> testMap2 = new Map<String, String>();
+		testMap2.put('Name', 'Joe Bloggs');
+		testMap2.put('Age', '27');
+		testMap2.put('Email', 'jbloggs@bloggsy.com');
+		testMap2.put('City', 'New York');
+		testMap2.put('Favourite Colour', 'Red');
+		
+		//The sizes of the maps at the moment is as we expect
+		System.assertEquals(testMap1.size(), toBeReplaced, 'You have yet to be enlightened by Koan 8 (I) in About Maps');
+		System.assertEquals(testMap2.size(), toBeReplaced, 'You have yet to be enlightened by Koan 8 (II) in About Maps');
+		
+		//If we now put the contents of testMap2 into testMap 1, what will the following assertions be?
+		System.assertEquals(testMap1.size(), toBeReplaced, 'You have yet to be enlightened by Koan 8 (III) in About Maps');
+		System.assertEquals(testMap2.size(), toBeReplaced, 'You have yet to be enlightened by Koan 8 (IV) in About Maps');
+		System.assertEquals(testMap1.get('Name'), toBeReplacedStr, 'You have yet to be enlightened by Koan 8 (V) in About Maps');
+		System.assertEquals(testMap1.get('Age'), toBeReplacedStr, 'You have yet to be enlightened by Koan 8 (VI) in About Maps');
+		System.assertEquals(testMap1.get('Email'), toBeReplacedStr, 'You have yet to be enlightened by Koan 8 (VII) in About Maps');
+		System.assertEquals(testMap1.get('City'), toBeReplacedStr, 'You have yet to be enlightened by Koan 8 (VIII) in About Maps');
+		System.assertEquals(testMap1.get('Favourite Colour'), toBeReplacedStr, 'You have yet to be enlightened by Koan 8 (IX) in About Maps');
+		
+		//So we can see that the contents of the map being added overwrite the existing content of the map where a key is already present
+	}
 }
